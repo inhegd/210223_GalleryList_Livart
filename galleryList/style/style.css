@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+/* Reset */
+*{
+	color: #000;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a 		{	text-decoration: none;	}
+a:link 		{	color: #333;	}
+a:visited 	{	color: #333;	}
+a:hover 	{	color: #333;	}
+a:active 	{	color: #333;	}
+
+
+ul  	{	list-style-type: none;	}
+/* Reset */
+
+
+
+/* guideline */
+/*div#wrap  {	border: 1px solid #000; }*/
+/*nav#gnb  {	border: 1px solid #000; }*/
+/*div#left{border: 1px solid #000;}
+div#galleryList{border: 1px solid #f80;}*/
+/* guideline */
+
+
+
+
+/* div#wrap 전체영역 */
+div#wrap {
+	width: 1060px;
+	margin: 0 auto;
+}
+/* div#wrap 전체영역 */
+
+
+/*                            gnb메뉴 시작                            */
+
+/* header#header */
+header#header {
+	text-align: center;
+}
+
+#header >h1{
+	height: 100px;
+	line-height: 100px;
+}
+
+nav#gnb{
+	width: 690px;
+	margin: 16px auto;
+}
+
+nav#gnb>#mainMenu>li{
+	float: left;
+}
+
+nav#gnb>#mainMenu>li a{
+	font-size: 12px;
+}
+
+nav#gnb>#mainMenu>li.selected{
+	font-weight: bold;
+}
+
+nav#gnb>#mainMenu::after {
+	content: "";
+	display: inline-block;
+}
+
+nav#gnb>#mainMenu>li:not(:last-child)::after {  /* 구분기호 넣기 */
+	content: "|";
+	font-size: 12px;
+	display: inline-block;
+	text-align: center;
+	width: 50px;
+
+	position: relative;
+	top: -1px;
+}
+
+/* header#header */
+
+
+/*                            gnb메뉴 끝                             */
+
+
+
+/*main#main*/
+main#main{
+	display: flex;
+	justify-content: space-between; /* 양쪽 끝에 벽으로 붙음 */
+}
+
+div#left{
+	width:390px;
+}
+/*main#main*/
+
+
+/*                            galleryList 시작                             */
+div#galleryList{
+	width: 630px;
+
+	display: flex;
+	flex-wrap: wrap; /* 영역 초과 하지 않게! */
+	justify-content: space-around; /*양쪽으로 붙는데 균등하게 배치해줌.*/
+}
+
+div.galleryArticle{
+	width: 200px; /* 섬네일 글 사이즈 딱 맞추기 */
+	text-align: center; /* 섬네일 글 정렬을 부모요소에서 하기 */
+}
+
+
+div.galleryArticle span.leadTxt{
+	font-weight: bold;
+	font-size: 12px;
+	color: #a07a56;
+}
+
+div.galleryArticle span.goodsName{
+	/*font-weight: bold;*/
+	font-size: 13px;
+}
+
+div.galleryArticle span.price{
+	display: block; /* 줄이 바뀌어서 */
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	color: #208a88;
+}
+
+div.galleryArticle span.price::after{
+	content: "  원";
+	font-size: 16px;
+}
+
+
+
+/*                            galleryList 끝                             */
+
